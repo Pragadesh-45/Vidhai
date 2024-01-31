@@ -17,7 +17,7 @@ async def create_upload_file(file : UploadFile = File(...)):
     with open(f"{IMAGEDIR}{file.filename}", "wb") as f:
         f.write(contents)
 
-    image = f"/Images/{file.filename}"
+    image = f"Images/{file.filename}"
   
     # Load a pretrained YOLO model (recommended for training)
     model = YOLO('tomato_best.pt')
