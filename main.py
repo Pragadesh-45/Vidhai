@@ -20,7 +20,7 @@ async def create_upload_file(file : UploadFile = File(...)):
     image = f"/Images/{file.filename}"
   
     # Load a pretrained YOLO model (recommended for training)
-    model = YOLO('/tomato_best.pt')
+    model = YOLO('tomato_best.pt')
 
     # Evaluate the model's performance on the validation set
     results = model.predict(source = image)
