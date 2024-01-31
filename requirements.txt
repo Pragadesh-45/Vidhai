@@ -37,3 +37,4 @@ zipp==3.17.0
 ultralytics==8.1.8
 uvicorn[standard]
 fastapi
+python-multipart 
