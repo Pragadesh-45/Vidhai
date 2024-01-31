@@ -17,10 +17,10 @@ async def create_upload_file(file : UploadFile = File(...)):
     with open(f"{IMAGEDIR}{file.filename}", "wb") as f:
         f.write(contents)
 
-    image = f"/home/siva/Documents/Python_Learning/Vidhai/Images/{file.filename}"
+    image = f"/Images/{file.filename}"
   
     # Load a pretrained YOLO model (recommended for training)
-    model = YOLO('/home/siva/Documents/Python_Learning/Vidhai/tomato_best.pt')
+    model = YOLO('/tomato_best.pt')
 
     # Evaluate the model's performance on the validation set
     results = model.predict(source = image)
